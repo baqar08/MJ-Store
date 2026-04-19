@@ -1,0 +1,23 @@
+{
+  "name": "mj-store-payment-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "bullmq": "^5.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0",
+    "firebase-admin": "^12.6.0",
+    "helmet": "^7.1.0",
+    "ioredis": "^5.4.1",
+    "prom-client": "^15.1.2",
+    "rate-limit-redis": "^4.2.0",
+    "razorpay": "^2.9.4",
+    "winston": "^3.13.0"
+  }
+}
