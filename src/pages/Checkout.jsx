@@ -86,7 +86,7 @@ export default function Checkout() {
         quantity: item.quantity,
       }));
 
-      const createRes = await fetch('http://localhost:5001/api/payment/create-order', {
+      const createRes = await fetch('/api/payment/create-order', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -120,7 +120,7 @@ export default function Checkout() {
         handler: async function (response) {
           // Step 3: Verify payment on backend
           try {
-            const verifyRes = await fetch('http://localhost:5001/api/payment/verify', {
+            const verifyRes = await fetch('/api/payment/verify', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -196,7 +196,7 @@ export default function Checkout() {
       rzp.open();
     } catch (error) {
       console.error('FATAL CATCH: Error processing payment pipeline!', error);
-      toast.error(error.message || 'Error processing payment. Please verify your connection.', { style: { fontSize: '13px' } });
+      toast.error('Something went wrong. Please check your connection and try again.', { style: { fontSize: '13px' } });
       setProcessing(false);
     }
   };
